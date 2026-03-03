@@ -1,65 +1,60 @@
 import React from 'react';
 
-const services = [
-    {
-        title: 'Artisan Roasts',
-        description: 'We source the finest beans globally and roast them to perfection for a rich, complex flavor in every cup.',
-        icon: (
-            <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
-            </svg>
-        ),
-    },
-    {
-        title: 'Expert Baristas',
-        description: 'Our passionate baristas treat every extraction as an art form, guaranteeing the perfect pour.',
-        icon: (
-            <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
-            </svg>
-        ),
-    },
-    {
-        title: 'Cozy Atmosphere',
-        description: 'A warm, inviting space with cinematic lighting, perfect for deep work or catching up with friends.',
-        icon: (
-            <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-            </svg>
-        ),
-    },
-];
-
 export default function Services() {
     return (
-        <section className="bg-darkBg py-24 px-5 lg:px-20 border-t border-white/5">
-            <div className="text-center mb-16">
-                <h2 className="font-bebas text-white text-[48px] md:text-[64px] leading-none mb-4">
-                    THE ART OF COFFEE
-                </h2>
-                <p className="font-inter text-lightGray/80 text-[18px] max-w-2xl mx-auto">
-                    We believe in honest ingredients, meticulous preparation, and spaces that inspire. Beyond just a drink, it's a daily ritual.
-                </p>
-            </div>
+        <section id="story" className="bg-darkBg py-24 px-5 lg:px-20 border-t border-white/5 relative overflow-hidden">
+            <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16 relative z-10">
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {services.map((service, index) => (
-                    <div
-                        key={index}
-                        className="group relative bg-[#0a0a0a] p-10 rounded-2xl border border-white/5 hover:-translate-y-2 hover:border-white/20 transition-all duration-300"
-                    >
-                        <div className="w-16 h-16 bg-white/5 rounded-xl flex items-center justify-center mb-6 group-hover:bg-white/10 transition-colors">
-                            {service.icon}
-                        </div>
-                        <h3 className="font-inter text-white text-2xl font-semibold mb-3">
-                            {service.title}
-                        </h3>
-                        <p className="font-inter text-lightGray/70 leading-relaxed max-w-sm">
-                            {service.description}
+                {/* Image Section */}
+                <div className="w-full lg:w-1/2 relative lg:order-2">
+                    <div className="aspect-square lg:aspect-[4/5] rounded-2xl overflow-hidden relative group">
+                        <img
+                            src="/storyus.jpg"
+                            alt="Filosofi KoffieQue"
+                            className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-1000 ease-in-out"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent opacity-80 pointer-events-none" />
+                        <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl pointer-events-none" />
+                    </div>
+                    {/* Decorative accent */}
+                    <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-white/5 rounded-full -z-10 blur-3xl" />
+                </div>
+
+                {/* Text Section */}
+                <div className="w-full lg:w-1/2 flex flex-col text-center lg:text-left lg:order-1">
+                    <span className="font-inter text-white/50 tracking-[0.2em] font-medium text-sm mb-4 uppercase">
+                        Filosofi Kami
+                    </span>
+                    <h2 className="font-bebas text-white text-[48px] md:text-[64px] leading-[1.1] mb-8">
+                        Cerita Perjalanan<br />
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/40">
+                            KoffieQue
+                        </span>
+                    </h2>
+
+                    <div className="font-inter text-lightGray/80 text-[16px] md:text-[18px] leading-relaxed space-y-6">
+                        <p>
+                            Bermula dari kecintaan mendalam terhadap setiap tetes kopi, <strong>KoffieQue</strong> lahir bukan sekadar sebagai tempat menjamu dahaga, melainkan sebagai wadah bertemunya rasa, obrolan bermakna, dan inspirasi.
+                        </p>
+                        <p>
+                            Kami percaya bahwa kopi yang baik selalu berasal dari dedikasi dan proses yang jujur. Oleh karena itu, kami menyajikan kurasi biji kopi pilihan terbaik yang diseduh dengan penuh presisi oleh tangan halus barista-barista kami.
+                        </p>
+                        <p>
+                            Di sini, setiap sudut ruangan dirancang secara estetis untuk menyelimuti kamu dalam suasana nyaman—sebuah pelarian sempurna untuk fokus bekerja, berdiskusi, atau sekadar meresapi ritme waktu dengan secangkir kopi di tangan.
                         </p>
                     </div>
-                ))}
+
+                    <div className="mt-12 flex flex-col sm:flex-row items-center gap-6 justify-center lg:justify-start">
+                        <button className="bg-white text-darkBg px-8 rounded-md font-medium font-inter h-12 flex items-center gap-3 hover:bg-gray-200 transition-transform hover:scale-105 duration-300 w-full sm:w-auto justify-center">
+                            <span>Baca Kisah Selengkapnya</span>
+                        </button>
+                    </div>
+                </div>
+
             </div>
+
+            {/* Background Texture Element */}
+            <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-white/[0.015] rounded-full blur-[100px] pointer-events-none -translate-x-1/2 -translate-y-1/2" />
         </section>
     );
 }

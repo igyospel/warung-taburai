@@ -42,6 +42,7 @@ export default function HeroSection() {
 
     return (
         <section
+            id="home"
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
             className="relative min-h-[600px] max-h-[965px] h-screen bg-[#0a0a09] overflow-hidden"
@@ -62,15 +63,15 @@ export default function HeroSection() {
             {/* The transparent isolated coffee cup (in front of text) */}
             <div className="absolute inset-0 flex items-center justify-center z-10 pt-20 pointer-events-none">
                 <motion.img
-                    src="/coffenew1_transparent.png"
-                    alt="Iced Coffee Latte"
-                    className="h-[60%] md:h-[80%] object-contain mix-blend-normal"
+                    src="/three_splash_dark.png"
+                    alt="Matcha, Coffee Latte, and Milo Splash"
+                    className="h-[60%] md:h-[80%] object-contain mix-blend-screen"
                     style={{
                         rotateX,
                         rotateY,
                         x: translateX,
                         y: translateY,
-                        filter: 'drop-shadow(0 30px 30px rgba(0,0,0,0.9))'
+                        filter: 'drop-shadow(0 30px 30px rgba(0,0,0,0.5))'
                     }}
                 />
             </div>
@@ -81,46 +82,39 @@ export default function HeroSection() {
 
             {/* Top Navbar */}
             <nav className="absolute top-0 left-0 right-0 flex items-center justify-between px-5 lg:px-20 py-4 z-20 pointer-events-auto">
-                <div className="flex items-center space-x-2">
-                    {/* Coffee cup icon */}
-                    <svg className="w-7 h-7 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" className="hidden" />
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M18 8h1a4 4 0 010 8h-1M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z M6 1v3 M10 1v3 M14 1v3" />
-                    </svg>
-                    <span className="hidden md:inline-block font-inter font-medium text-white text-[24px]">KoffieQue</span>
+                <div className="flex items-center">
+                    <img
+                        src="/logo-2.png"
+                        alt="KoffieQue Logo"
+                        className="h-8 md:h-10 w-auto object-contain"
+                    />
                 </div>
 
                 <ul className="hidden lg:flex space-x-6 text-lightGray font-inter" style={{ letterSpacing: '-0.32px' }}>
-                    {['Home', 'Menu', 'Our Story', 'Locations', 'Contact Us'].map((item) => (
-                        <li key={item} className="cursor-pointer hover:text-white transition-colors">
-                            {item}
+                    {[
+                        { name: 'Beranda', href: '#home' },
+                        { name: 'Menu', href: '#menu' },
+                        { name: 'Cerita Kami', href: '#story' },
+                        { name: 'Lokasi', href: '#location' },
+                        { name: 'Hubungi Kami', href: '#contact' }
+                    ].map((item) => (
+                        <li key={item.name} className="cursor-pointer hover:text-white transition-colors">
+                            <a href={item.href} className="block w-full h-full">{item.name}</a>
                         </li>
                     ))}
                 </ul>
 
-                <div className="flex items-center space-x-4">
-                    <a href="#" className="hidden md:inline-block text-[#FBFBFD] font-inter hover:text-white transition-colors">
-                        Sign In
-                    </a>
-                    <button className="flex items-center space-x-2 bg-white rounded-md px-4 h-12 shadow-sm hover:bg-gray-100 transition-colors">
-                        <svg className="w-4 h-4 text-cartDark" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                            <path d="M6 6h15l-1.5 9h-13z" />
-                            <circle cx="9" cy="20" r="1" />
-                            <circle cx="18" cy="20" r="1" />
-                        </svg>
-                        <span className="font-medium text-cartDark font-inter">Cart</span>
-                    </button>
-                </div>
+                {/* Removed Sign In and Cart buttons */}
             </nav>
 
             {/* Bottom CTA area */}
             <div className="absolute inset-x-0 bottom-0 flex flex-col lg:flex-row items-start lg:items-end justify-between px-5 lg:px-20 py-8 gap-6 z-20 pointer-events-auto">
                 <div className="flex flex-col gap-4 max-w-[420px]">
                     <p className="font-inter text-white text-[20px] leading-[30px]" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>
-                        Savor the finest artisan beans roasted to perfection, crafted by expert baristas, because your daily cup should feel extraordinary.
+                        Nikmati biji kopi artisan terbaik yang dipanggang dengan sempurna, diracik oleh barista ahli, karena secangkir kopimu setiap hari harus terasa luar biasa.
                     </p>
                     <button className="flex items-center space-x-2 bg-white rounded-md h-12 px-5 border border-lightGray shadow-sm hover:bg-gray-100 transition-colors w-max">
-                        <span className="font-medium text-cartDark font-inter">Order Now</span>
+                        <span className="font-medium text-cartDark font-inter">Pesan Sekarang</span>
                         <svg className="w-4 h-4 text-cartDark" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h14M13 5l6 7-6 7" />
                         </svg>
@@ -129,7 +123,7 @@ export default function HeroSection() {
 
                 <div className="max-w-[466px]">
                     <h2 className="font-bebas text-white text-[64px] lg:text-[64px] md:text-[60px] sm:text-[48px] leading-none" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>
-                        Find the perfect brew that fits your journey
+                        Temukan seduhan sempurna yang pas menemani harimu
                     </h2>
                 </div>
             </div>
