@@ -50,9 +50,9 @@ export default function Footer() {
                     <ul className="space-y-4 text-lightGray/70">
                         <li className="leading-relaxed">Jl. Rawa Domba, RT.3/RW.16, Duren Sawit, Jakarta Timur 13440</li>
                         <li>
-                            <span className="opacity-50 italic hover:opacity-100 transition-opacity">
-                                No Telp: (Belum tersedia di GMaps)
-                            </span>
+                            <a href="tel:+6281298325387" className="hover:text-white transition-colors">
+                                0812-9832-5387
+                            </a>
                         </li>
                         <li>
                             <a href="mailto:hello@koffieque.com" className="hover:text-white transition-colors">
