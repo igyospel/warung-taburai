@@ -82,11 +82,11 @@ export default function HeroSection() {
 
             {/* Top Navbar */}
             <nav className="absolute top-0 left-0 right-0 flex items-center justify-between px-5 lg:px-20 py-4 z-20 pointer-events-auto">
-                <div className="flex items-center">
+                <div className="flex items-center z-50">
                     <img
                         src="/logo-2.png"
                         alt="KoffieQue Logo"
-                        className="h-8 md:h-10 w-auto object-contain"
+                        className="h-7 sm:h-8 md:h-10 lg:h-12 w-auto object-contain drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)] transition-all duration-300"
                     />
                 </div>
 
@@ -98,9 +98,14 @@ export default function HeroSection() {
                         { name: 'Lokasi', href: '#location' },
                         { name: 'Hubungi Kami', href: '#contact' }
                     ].map((item) => (
-                        <li key={item.name} className="cursor-pointer hover:text-white transition-colors">
+                        <motion.li
+                            key={item.name}
+                            whileHover={{ scale: 1.05, y: -2 }}
+                            whileTap={{ scale: 0.95 }}
+                            className="cursor-pointer hover:text-white transition-colors"
+                        >
                             <a href={item.href} className="block w-full h-full">{item.name}</a>
-                        </li>
+                        </motion.li>
                     ))}
                 </ul>
 

@@ -10,7 +10,7 @@ export default function Footer() {
                         <img
                             src="/logo-2.png"
                             alt="KoffieQue Logo"
-                            className="h-10 w-auto object-contain grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                            className="h-8 sm:h-10 md:h-12 w-auto object-contain grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-300 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]"
                         />
                     </div>
                     <p className="max-w-md text-lightGray/70 leading-relaxed mb-6">
