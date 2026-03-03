@@ -34,10 +34,16 @@ export default function Footer() {
                         <span>Eksplorasi</span>
                     </h4>
                     <ul className="space-y-4 text-lightGray/70">
-                        {['Menu', 'Cerita Kami', 'Grosir', 'Karir', 'Lokasi'].map((item) => (
-                            <li key={item}>
-                                <a href="#" className="hover:text-white transition-colors">
-                                    {item}
+                        {[
+                            { name: 'Beranda', href: '#home' },
+                            { name: 'Menu', href: '#menu' },
+                            { name: 'Cerita Kami', href: '#story' },
+                            { name: 'Lokasi', href: '#location' },
+                            { name: 'Hubungi Kami', href: '#contact' }
+                        ].map((item) => (
+                            <li key={item.name}>
+                                <a href={item.href} className="hover:text-white transition-colors">
+                                    {item.name}
                                 </a>
                             </li>
                         ))}
