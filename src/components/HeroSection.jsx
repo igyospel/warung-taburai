@@ -164,12 +164,12 @@ export default function HeroSection() {
                     <p className="font-inter text-white text-[15px] sm:text-base md:text-[20px] leading-relaxed md:leading-[30px]" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
                         Nikmati biji kopi artisan terbaik yang dipanggang dengan sempurna, diracik oleh barista ahli, karena secangkir kopimu setiap hari harus terasa luar biasa.
                     </p>
-                    <button className="flex items-center space-x-2 bg-white rounded-md h-12 px-5 border border-lightGray shadow-sm hover:bg-gray-100 transition-colors w-max">
-                        <span className="font-medium text-cartDark font-inter">Pesan Sekarang</span>
+                    <a href="#menu" className="flex items-center space-x-2 bg-white rounded-md h-12 px-5 border border-lightGray shadow-sm hover:bg-gray-100 transition-colors w-max">
+                        <span className="font-medium text-cartDark font-inter">Lihat Menu</span>
                         <svg className="w-4 h-4 text-cartDark" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h14M13 5l6 7-6 7" />
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 5v14m0 0l-7-7m7 7l7-7" />
                         </svg>
-                    </button>
+                    </a>
                 </div>
 
                 <div className="max-w-[466px]">
