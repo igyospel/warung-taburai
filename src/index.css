@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Bebas+Neue&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .bg-video {
+    @apply absolute inset-0 w-full h-full object-cover;
+  }
+  .gradient-overlay-top {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3), transparent);
+    height: 260px;
+  }
+  .gradient-overlay-bottom {
+    background: linear-gradient(to top, rgba(0,0,0,0.3), transparent);
+    height: 260px;
+  }
+}
