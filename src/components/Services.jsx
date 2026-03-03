@@ -34,13 +34,13 @@ export default function Services() {
 
                     <div className="font-inter text-lightGray/80 text-[16px] md:text-[18px] leading-relaxed space-y-6">
                         <p>
-                            Berawal dari cinta yang serius sama kopi, KOFFIEQUE hadir bukan cuma buat ngilangin haus kafein. Tempat ini lahir sebagai ruang buat rasa, cerita, dan obrolan yang kadang nggak selesai dalam satu cangkir.
+                            Berawal dari cinta yang serius sama kopi, KoffieQue hadir bukan cuma buat ngilangin haus kafein. Tempat ini lahir sebagai ruang buat rasa, cerita, dan obrolan yang kadang nggak selesai dalam satu cangkir.
                         </p>
                         <p>
                             Kami percaya kopi enak itu bukan kebetulan. Ada proses, ada detail, ada standar yang nggak ditawar. Karena itu, setiap biji yang kami pilih sudah melewati kurasi yang matang, lalu diseduh dengan presisi oleh barista yang paham karakter, bukan sekadar resep.
                         </p>
                         <p>
-                            Di KOFFIEQUE, kamu nggak cuma datang buat minum. Kamu datang buat tinggal sebentar lebih lama. Setiap sudut dirancang dengan rasa — nyaman tanpa berlebihan, estetik tanpa dibuat-buat. Cocok buat kerja, diskusi, atau cuma duduk diam menikmati waktu yang berjalan pelan, dengan kopi yang tepat di tangan.
+                            Di KoffieQue, kamu nggak cuma datang buat minum. Kamu datang buat tinggal sebentar lebih lama. Setiap sudut dirancang dengan rasa nyaman tanpa berlebihan, estetik tanpa dibuat-buat. Cocok buat kerja, diskusi, atau cuma duduk diam menikmati waktu yang berjalan pelan, dengan kopi yang tepat di tangan.
                         </p>
                     </div>
 
