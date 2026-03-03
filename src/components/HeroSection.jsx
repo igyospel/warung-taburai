@@ -1,7 +1,9 @@
-import React from 'react';
-import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
+import React, { useState } from 'react';
+import { motion, useMotionValue, useSpring, useTransform, AnimatePresence } from 'framer-motion';
 
 export default function HeroSection() {
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
     // Motion values to track mouse position (from -0.5 to 0.5)
     const xPct = useMotionValue(0);
     const yPct = useMotionValue(0);
@@ -61,11 +63,11 @@ export default function HeroSection() {
             </motion.h1>
 
             {/* The transparent isolated coffee cup (in front of text) */}
-            <div className="absolute inset-0 flex items-center justify-center z-10 pt-20 pointer-events-none">
+            <div className="absolute inset-0 flex items-start md:items-center justify-center z-10 pt-[15vh] md:pt-20 pointer-events-none">
                 <motion.img
                     src="/three_splash_dark.png"
                     alt="Matcha, Coffee Latte, and Milo Splash"
-                    className="h-[45%] md:h-[70%] lg:h-[80%] object-contain mix-blend-screen"
+                    className="h-[38vh] md:h-[70%] lg:h-[80%] object-contain mix-blend-screen"
                     style={{
                         rotateX,
                         rotateY,
@@ -81,8 +83,8 @@ export default function HeroSection() {
             <div className="absolute inset-x-0 bottom-0 gradient-overlay-bottom pointer-events-none z-10" />
 
             {/* Top Navbar */}
-            <nav className="absolute top-0 left-0 right-0 flex items-center justify-between px-5 lg:px-20 py-4 z-20 pointer-events-auto">
-                <div className="flex items-center z-50">
+            <nav className="absolute top-0 left-0 right-0 flex items-center justify-between px-5 lg:px-20 py-4 z-50 pointer-events-auto">
+                <div className="flex items-center z-50 relative">
                     <img
                         src="/logo-2.png"
                         alt="KoffieQue Logo"
@@ -109,13 +111,57 @@ export default function HeroSection() {
                     ))}
                 </ul>
 
-                {/* Removed Sign In and Cart buttons */}
+                {/* Mobile Hamburger Button */}
+                <button
+                    className="lg:hidden text-white z-50 p-2 relative"
+                    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                >
+                    <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        {isMobileMenuOpen ? (
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                        ) : (
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+                        )}
+                    </svg>
+                </button>
             </nav>
+
+            {/* Mobile Menu Overlay */}
+            <AnimatePresence>
+                {isMobileMenuOpen && (
+                    <motion.div
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -20 }}
+                        transition={{ duration: 0.3 }}
+                        className="absolute inset-0 z-40 bg-[#0a0a09]/98 backdrop-blur-xl flex flex-col items-center justify-center pointer-events-auto"
+                    >
+                        <ul className="flex flex-col space-y-8 text-center text-white font-inter text-2xl font-medium tracking-wide">
+                            {[
+                                { name: 'Beranda', href: '#home' },
+                                { name: 'Menu', href: '#menu' },
+                                { name: 'Cerita Kami', href: '#story' },
+                                { name: 'Lokasi', href: '#location' },
+                                { name: 'Hubungi Kami', href: '#contact' }
+                            ].map((item) => (
+                                <motion.li
+                                    key={item.name}
+                                    whileTap={{ scale: 0.95 }}
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                    className="hover:text-lightGray/80 transition-colors"
+                                >
+                                    <a href={item.href} className="block w-full h-full p-2">{item.name}</a>
+                                </motion.li>
+                            ))}
+                        </ul>
+                    </motion.div>
+                )}
+            </AnimatePresence>
 
             {/* Bottom CTA area */}
             <div className="absolute inset-x-0 bottom-0 flex flex-col lg:flex-row items-start lg:items-end justify-between px-5 lg:px-20 py-8 md:py-12 gap-6 z-20 pointer-events-auto">
-                <div className="flex flex-col gap-4 max-w-[420px]">
-                    <p className="font-inter text-white text-base md:text-[20px] leading-relaxed md:leading-[30px]" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>
+                <div className="flex flex-col gap-4 max-w-[420px] pb-4 md:pb-0">
+                    <p className="font-inter text-white text-[15px] sm:text-base md:text-[20px] leading-relaxed md:leading-[30px]" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
                         Nikmati biji kopi artisan terbaik yang dipanggang dengan sempurna, diracik oleh barista ahli, karena secangkir kopimu setiap hari harus terasa luar biasa.
                     </p>
                     <button className="flex items-center space-x-2 bg-white rounded-md h-12 px-5 border border-lightGray shadow-sm hover:bg-gray-100 transition-colors w-max">
