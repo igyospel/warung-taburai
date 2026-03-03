@@ -48,11 +48,11 @@ export default function Footer() {
                 <div>
                     <h4 className="text-white font-semibold mb-6">Kontak</h4>
                     <ul className="space-y-4 text-lightGray/70">
-                        <li>Jl. Kalimalang Raya, Jakarta Timur</li>
+                        <li className="leading-relaxed">Jl. Rawa Domba, RT.3/RW.16, Duren Sawit, Jakarta Timur 13440</li>
                         <li>
-                            <a href="tel:+18005550199" className="hover:text-white transition-colors">
-                                +1 (800) 555-0199
-                            </a>
+                            <span className="opacity-50 italic hover:opacity-100 transition-opacity">
+                                No Telp: (Belum tersedia di GMaps)
+                            </span>
                         </li>
                         <li>
                             <a href="mailto:hello@koffieque.com" className="hover:text-white transition-colors">

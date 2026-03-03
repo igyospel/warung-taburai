@@ -18,22 +18,23 @@ export default function Location() {
                     <div className="space-y-6">
                         <div className="flex flex-col items-center lg:items-start gap-2">
                             <h3 className="font-inter font-semibold text-white text-lg tracking-wide uppercase text-white/70">Alamat</h3>
-                            <p className="font-inter text-lightGray max-w-[280px]">
-                                KoffieQue Coffee & Eatery<br />
-                                Jl. Kalimalang Raya, Jakarta Timur
+                            <p className="font-inter text-lightGray max-w-[280px] text-sm leading-relaxed">
+                                Jl. Rawa Domba, RT.3/RW.16, Duren Sawit, Kec. Duren Sawit, Kota Jakarta Timur 13440
                             </p>
                         </div>
 
                         <div className="flex flex-col items-center lg:items-start gap-2">
                             <h3 className="font-inter font-semibold text-white text-lg tracking-wide uppercase text-white/70">Jam Buka</h3>
-                            <p className="font-inter text-lightGray">
-                                Sen - Min: 08:00 WIB - 22:00 WIB
+                            <p className="font-inter text-lightGray text-sm space-y-1">
+                                <span className="block">Sen - Kam: 15:00 - 23:00 WIB</span>
+                                <span className="block">Jum - Sab: 15:00 - 23:30 WIB</span>
+                                <span className="block">Min: 15:00 - 23:00 WIB</span>
                             </p>
                         </div>
                     </div>
 
                     <a
-                        href="https://www.google.com/maps/place/KoffieQue+Coffee+%26+Eatery/@-6.246202,106.9144827,17z/data=!3m1!4b1!4m6!3m5!1s0x2e698dd28a09b10f:0x968ec7ff8c763d55!8m2!3d-6.2462073!4d106.9170576!16s%2Fg%2F11vwdxxffy?entry=ttu"
+                        href="https://www.google.com/maps/place/KoffieQue+Coffee+%26+Eatery/@-6.2455244,106.9163159,16.36z/data=!4m6!3m5!1s0x2e698dd28a09b10f:0x968ec7ff8c763d55!8m2!3d-6.2462073!4d106.9170576!16s%2Fg%2F11vwdxxffy?entry=ttu&g_ep=EgoyMDI2MDMwMS4xIKXMDSoASAFQAw%3D%3D"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="mt-10 inline-flex items-center justify-center space-x-2 bg-white text-[#050505] rounded-md h-12 px-8 font-inter font-medium hover:bg-gray-200 transition-colors w-max mx-auto lg:mx-0"
@@ -48,7 +49,7 @@ export default function Location() {
                 {/* Map Side */}
                 <div className="w-full lg:w-2/3 h-[400px] md:h-[500px] rounded-2xl overflow-hidden border border-white/10 relative group bg-gray-900">
                     <iframe
-                        src="https://maps.google.com/maps?q=KoffieQue+Coffee+Eatery&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                        src="https://maps.google.com/maps?q=KoffieQue+Coffee+%26+Eatery,+Jl.+Rawa+Domba&t=&z=16&ie=UTF8&iwloc=&output=embed"
                         className="w-full h-full border-0 grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 ease-out"
                         allowFullScreen=""
                         loading="lazy"
