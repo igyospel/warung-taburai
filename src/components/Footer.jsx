@@ -14,7 +14,7 @@ export default function Footer() {
                         />
                     </div>
                     <p className="max-w-md text-lightGray/70 leading-relaxed mb-6">
-                        Temukan pilihan biji kopi artisan premium kami. Kami berdedikasi untuk memberikan pengalaman menikmati kopi yang tak tertandingi setiap harinya.
+                        Bergabunglah dengan komunitas KoffieQue untuk mendapatkan informasi menu terbaru, rilisan eksklusif, serta cerita di balik setiap biji yang kami kurasi dengan penuh perhatian. Nikmati akses lebih awal ke seasonal selection, penawaran terbatas, dan pengalaman kopi yang dirancang untuk menyempurnakan ritual harian Anda.
                     </p>
                     <form className="flex w-full max-w-sm">
                         <input
