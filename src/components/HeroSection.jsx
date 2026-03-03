@@ -65,7 +65,7 @@ export default function HeroSection() {
                 <motion.img
                     src="/three_splash_dark.png"
                     alt="Matcha, Coffee Latte, and Milo Splash"
-                    className="h-[60%] md:h-[80%] object-contain mix-blend-screen"
+                    className="h-[45%] md:h-[70%] lg:h-[80%] object-contain mix-blend-screen"
                     style={{
                         rotateX,
                         rotateY,
@@ -113,9 +113,9 @@ export default function HeroSection() {
             </nav>
 
             {/* Bottom CTA area */}
-            <div className="absolute inset-x-0 bottom-0 flex flex-col lg:flex-row items-start lg:items-end justify-between px-5 lg:px-20 py-8 gap-6 z-20 pointer-events-auto">
+            <div className="absolute inset-x-0 bottom-0 flex flex-col lg:flex-row items-start lg:items-end justify-between px-5 lg:px-20 py-8 md:py-12 gap-6 z-20 pointer-events-auto">
                 <div className="flex flex-col gap-4 max-w-[420px]">
-                    <p className="font-inter text-white text-[20px] leading-[30px]" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>
+                    <p className="font-inter text-white text-base md:text-[20px] leading-relaxed md:leading-[30px]" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>
                         Nikmati biji kopi artisan terbaik yang dipanggang dengan sempurna, diracik oleh barista ahli, karena secangkir kopimu setiap hari harus terasa luar biasa.
                     </p>
                     <button className="flex items-center space-x-2 bg-white rounded-md h-12 px-5 border border-lightGray shadow-sm hover:bg-gray-100 transition-colors w-max">
@@ -127,7 +127,7 @@ export default function HeroSection() {
                 </div>
 
                 <div className="max-w-[466px]">
-                    <h2 className="font-bebas text-white text-[64px] lg:text-[64px] md:text-[60px] sm:text-[48px] leading-none" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>
+                    <h2 className="font-bebas text-white text-[42px] sm:text-[48px] md:text-[60px] lg:text-[64px] leading-[1.1] md:leading-none mt-4 lg:mt-0" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>
                         Temukan seduhan sempurna yang pas menemani harimu
                     </h2>
                 </div>
