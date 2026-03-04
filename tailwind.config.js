@@ -8,7 +8,8 @@ module.exports = {
         bebas: ['"Bebas Neue"', 'sans-serif'],
       },
       colors: {
-        darkBg: '#010101',
+        darkBg: '#882c17',
+        darkerBg: '#662111',
         lightGray: '#EEEFF2',
         cartDark: '#272835',
       },

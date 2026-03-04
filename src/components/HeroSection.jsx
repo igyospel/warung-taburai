@@ -47,10 +47,10 @@ export default function HeroSection() {
             id="home"
             onMouseMove={handleMouseMove}
             onMouseLeave={handleMouseLeave}
-            className="relative min-h-[600px] max-h-[965px] h-screen bg-[#0a0a09] overflow-hidden"
+            className="relative min-h-[600px] max-h-[965px] h-screen bg-darkBg overflow-hidden"
             style={{ perspective: '1200px' }} // Critical for 3D effect
         >
-            {/* Decorative “KOFFIEQUE” - Layered behind */}
+            {/* Decorative “WARUNG TABURAI” - Layered behind */}
             <motion.h1
                 className="absolute inset-x-0 top-[10%] md:top-[15%] text-center text-[18vw] md:text-[14vw] lg:text-[18vw] mx-auto font-bebas uppercase font-bold text-transparent bg-clip-text z-0 leading-none whitespace-nowrap"
                 style={{
@@ -59,7 +59,7 @@ export default function HeroSection() {
                     y: textTranslateY
                 }}
             >
-                KOFFIEQUE
+                WARUNG TABURAI
             </motion.h1>
 
             {/* The transparent isolated coffee cup (in front of text) */}
@@ -87,7 +87,7 @@ export default function HeroSection() {
                 <div className="flex items-center z-50 relative">
                     <img
                         src="/logo-2.png"
-                        alt="KoffieQue Logo"
+                        alt="Warung Taburai Logo"
                         className="h-7 sm:h-8 md:h-10 lg:h-12 w-auto object-contain drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)] transition-all duration-300"
                     />
                 </div>
@@ -134,7 +134,7 @@ export default function HeroSection() {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
                         transition={{ duration: 0.3 }}
-                        className="absolute inset-0 z-40 bg-[#0a0a09]/98 backdrop-blur-xl flex flex-col items-center justify-center pointer-events-auto"
+                        className="absolute inset-0 z-40 bg-darkBg/98 backdrop-blur-xl flex flex-col items-center justify-center pointer-events-auto"
                     >
                         <ul className="flex flex-col space-y-8 text-center text-white font-inter text-2xl font-medium tracking-wide">
                             {[
@@ -162,7 +162,7 @@ export default function HeroSection() {
             <div className="absolute inset-x-0 bottom-0 flex flex-col lg:flex-row items-start lg:items-end justify-between px-5 lg:px-20 py-8 md:py-12 gap-6 z-20 pointer-events-auto">
                 <div className="flex flex-col gap-4 max-w-[420px] pb-4 md:pb-0">
                     <p className="font-inter text-white text-[15px] sm:text-base md:text-[20px] leading-relaxed md:leading-[30px]" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
-                        Nikmati biji kopi artisan terbaik yang dipanggang dengan sempurna, diracik oleh barista ahli, karena secangkir kopimu setiap hari harus terasa luar biasa.
+                        Nikmati ragam masakan rumahan Indonesia dengan cita rasa otentik warisan keluarga. Porsi mantap, rasa juara, harga mulai belasan ribu rupiah saja.
                     </p>
                     <a href="#menu" className="flex items-center space-x-2 bg-white rounded-md h-12 px-5 border border-lightGray shadow-sm hover:bg-gray-100 transition-colors w-max">
                         <span className="font-medium text-cartDark font-inter">Lihat Menu</span>
@@ -174,7 +174,7 @@ export default function HeroSection() {
 
                 <div className="max-w-[466px]">
                     <h2 className="font-bebas text-white text-[42px] sm:text-[48px] md:text-[60px] lg:text-[64px] leading-[1.1] md:leading-none mt-4 lg:mt-0" style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>
-                        Temukan seduhan sempurna yang pas menemani harimu
+                        Masakan Rumahan Nusantara Pilihan Praz Teguh
                     </h2>
                 </div>
             </div>

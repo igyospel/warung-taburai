@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const pictures = [
-    '/menu/2024-10-12-8.jpg',
-    '/menu/2024-10-12-9.jpg',
-    '/menu/2024-10-12-11.jpg',
-    '/menu/2024-10-12-12.jpg',
-    '/menu/2024-10-12-13.jpg',
-    '/menu/2024-10-12-14.jpg',
-    '/menu/2024-10-12-15.jpg'
+    '/menu/SaveClip.App_566190364_18083798294057320_7033915474214939346_n.jpg',
+    '/menu/SaveClip.App_572732899_18091736314850705_119498029439047957_n.jpg',
+    '/menu/SaveClip.App_573211520_18081903677046188_6840224848781492840_n.jpg',
+    '/menu/SaveClip.App_580210434_18537214801034332_1916179799570411448_n.jpg',
+    '/menu/SaveClip.App_580553491_18046463618681367_3510774611409290936_n.jpg',
+    '/menu/SaveClip.App_588127788_17863944201457959_3863618912384363784_n.jpg',
+    '/menu/SaveClip.App_625018424_17910168297302600_7742273806030688714_n.jpg'
 ];
 
 export default function FeaturedMenu() {
@@ -21,7 +21,7 @@ export default function FeaturedMenu() {
                     MENU KAMI
                 </h2>
                 <p className="font-inter text-lightGray text-[18px] max-w-2xl mx-auto">
-                    Sekilas tentang keahlian kami sehari-hari. Setiap tuangan, setiap cangkir, menceritakan kisah tentang gairah dan presisi.
+                    Mulai dari Ayam Goreng Kecombrang, Paru Goreng, Dendeng, hingga kesegaran Es Timun Nanas. Sajian khas rumahan yang dijamin bikin kangen.
                 </p>
             </div>
 
@@ -31,12 +31,12 @@ export default function FeaturedMenu() {
                         key={index}
                         layoutId={`image-wrapper-${index}`}
                         onClick={() => setSelectedImage({ src: pic, index })}
-                        className="group relative aspect-square md:aspect-[4/5] overflow-hidden rounded-xl bg-[#0a0a0a] border border-white/5 cursor-pointer"
+                        className="group relative aspect-square md:aspect-[4/5] overflow-hidden rounded-xl bg-darkerBg border border-white/5 cursor-pointer"
                     >
                         <motion.img
                             layoutId={`image-${index}`}
                             src={pic}
-                            alt={`KoffieQue menu image ${index + 1}`}
+                            alt={`Warung Taburai menu image ${index + 1}`}
                             className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                         />
                         {/* Soft overlay on hover */}

@@ -10,10 +10,10 @@ export default function Services() {
                     <div className="aspect-square lg:aspect-[4/5] rounded-2xl overflow-hidden relative group">
                         <img
                             src="/storyus.jpg"
-                            alt="Filosofi KoffieQue"
+                            alt="Filosofi Warung Taburai"
                             className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-1000 ease-in-out"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent opacity-80 pointer-events-none" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-darkBg via-transparent to-transparent opacity-80 pointer-events-none" />
                         <div className="absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl pointer-events-none" />
                     </div>
                     {/* Decorative accent */}
@@ -28,19 +28,19 @@ export default function Services() {
                     <h2 className="font-bebas text-white text-[48px] md:text-[64px] leading-[1.1] mb-8">
                         Cerita Perjalanan<br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/40">
-                            KoffieQue
+                            Warung Taburai
                         </span>
                     </h2>
 
                     <div className="font-inter text-lightGray/80 text-[16px] md:text-[18px] leading-relaxed space-y-6">
                         <p>
-                            Berawal dari cinta yang serius sama kopi, KoffieQue hadir bukan cuma buat ngilangin haus kafein. Tempat ini lahir sebagai ruang buat rasa, cerita, dan obrolan yang kadang nggak selesai dalam satu cangkir.
+                            Berawal dari resep masakan warisan almarhumah ibu tercinta, komika dan kreator Praz Teguh mendirikan Warung Taburai. Tempat ini hadir bukan sekadar rumah makan biasa, melainkan menjadi ruang nostalgia untuk merayakan lezatnya masakan rumahan khas Indonesia.
                         </p>
                         <p>
-                            Kami percaya kopi enak itu bukan kebetulan. Ada proses, ada detail, ada standar yang nggak ditawar. Karena itu, setiap biji yang kami pilih sudah melewati kurasi yang matang, lalu diseduh dengan presisi oleh barista yang paham karakter, bukan sekadar resep.
+                            Kami percaya masakan enak lahir dari bumbu yang berani dan proses yang jujur. Kami menyajikan berbagai menu andalan Nusantara, seperti Nasi Ayam Goreng Kecombrang, Nasi Ikan Bakar, Dendeng, hingga Telur Balado dan Paru Goreng—dibuat agar cocok di lidah siapa pun yang memakannya.
                         </p>
                         <p>
-                            Di KoffieQue, kamu nggak cuma datang buat minum. Kamu datang buat tinggal sebentar lebih lama. Setiap sudut dirancang dengan rasa nyaman tanpa berlebihan, estetik tanpa dibuat-buat. Cocok buat kerja, diskusi, atau cuma duduk diam menikmati waktu yang berjalan pelan, dengan kopi yang tepat di tangan.
+                            Kini, Warung Taburai telah berkembang menjadi salah satu rumah makan primadona yang tersebar di banyak kota. Menjadi tempat nongkrong asyik, spot kuliner favorit, serta ruang nyaman bagi siapa saja untuk menikmati santapan nikmat, lengkap dengan segelas Timun Nanas segar, dengan harga yang selalu ramah di kantong.
                         </p>
                     </div>
 
