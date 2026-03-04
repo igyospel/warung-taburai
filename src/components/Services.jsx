@@ -9,7 +9,7 @@ export default function Services() {
                 <div className="w-full lg:w-1/2 relative lg:order-2">
                     <div className="aspect-square lg:aspect-[4/5] rounded-2xl overflow-hidden relative group">
                         <img
-                            src="/storyus.jpg"
+                            src="/tokoku.jpg"
                             alt="Filosofi Warung Taburai"
                             className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-1000 ease-in-out"
                         />
