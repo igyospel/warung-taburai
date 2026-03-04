@@ -65,9 +65,9 @@ export default function HeroSection() {
             {/* The transparent isolated coffee cup (in front of text) */}
             <div className="absolute inset-0 flex items-start md:items-center justify-center z-10 pt-[15vh] md:pt-20 pointer-events-none">
                 <motion.img
-                    src="/three_splash_dark.png"
-                    alt="Matcha, Coffee Latte, and Milo Splash"
-                    className="h-[38vh] md:h-[70%] lg:h-[80%] object-contain mix-blend-screen"
+                    src="/menubuka.png"
+                    alt="Menu Nasi Andalan Warung Taburai"
+                    className="h-[38vh] md:h-[70%] lg:h-[80%] object-contain mix-blend-normal drop-shadow-2xl"
                     style={{
                         rotateX,
                         rotateY,
